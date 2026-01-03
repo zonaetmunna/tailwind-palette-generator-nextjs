@@ -1,0 +1,53 @@
+{
+	"common": {
+		"appName": "Generador de Paletas Tailwind",
+		"loading": "Cargando...",
+		"error": "Error",
+		"success": "Éxito",
+		"copy": "Copiar",
+		"copied": "¡Copiado!",
+		"download": "Descargar",
+		"randomize": "Aleatorio",
+		"darkMode": "Modo Oscuro"
+	},
+	"header": {
+		"title": "Generador de Paletas Tailwind",
+		"subtitle": "Crea Hermosas Paletas de Colores"
+	},
+	"colorPicker": {
+		"baseColor": "Color Base",
+		"hexPlaceholder": "#RRGGBB",
+		"invalidColor": "Formato de color inválido"
+	},
+	"controls": {
+		"vibrancy": "Vibración",
+		"hueShift": "Cambio de Tono"
+	},
+	"accessibility": {
+		"title": "Pares de Accesibilidad",
+		"accessible": "Combinaciones Accesibles",
+		"inaccessible": "Combinaciones Inaccesibles",
+		"passing": "aprobadas",
+		"total": "total",
+		"noAccessible": "No se encontraron combinaciones accesibles",
+		"allAccessible": "¡Todas las combinaciones son accesibles!"
+	},
+	"export": {
+		"json": "JSON",
+		"css": "CSS",
+		"tailwind": "Tailwind",
+		"scss": "SCSS",
+		"downloadSuccess": "¡Descargado exitosamente!"
+	},
+	"usage": {
+		"title": "Ejemplos de Uso",
+		"tailwindClasses": "Clases Tailwind",
+		"cssVariables": "Variables CSS",
+		"copiedToClipboard": "¡Copiado al portapapeles!"
+	},
+	"toast": {
+		"copiedToClipboard": "{{value}} ha sido copiado al portapapeles.",
+		"colorRandomized": "Nuevo color base generado",
+		"downloadSuccess": "Paleta descargada exitosamente"
+	}
+}

@@ -1,0 +1,53 @@
+{
+	"common": {
+		"appName": "Tailwind Palette Generator",
+		"loading": "Loading...",
+		"error": "Error",
+		"success": "Success",
+		"copy": "Copy",
+		"copied": "Copied!",
+		"download": "Download",
+		"randomize": "Randomize",
+		"darkMode": "Dark Mode"
+	},
+	"header": {
+		"title": "Tailwind Palette Generator",
+		"subtitle": "Create Beautiful Color Palettes"
+	},
+	"colorPicker": {
+		"baseColor": "Base Color",
+		"hexPlaceholder": "#RRGGBB",
+		"invalidColor": "Invalid color format"
+	},
+	"controls": {
+		"vibrancy": "Vibrancy",
+		"hueShift": "Hue Shift"
+	},
+	"accessibility": {
+		"title": "Accessibility Pairs",
+		"accessible": "Accessible Combinations",
+		"inaccessible": "Inaccessible Combinations",
+		"passing": "passing",
+		"total": "total",
+		"noAccessible": "No accessible combinations found",
+		"allAccessible": "All combinations are accessible!"
+	},
+	"export": {
+		"json": "JSON",
+		"css": "CSS",
+		"tailwind": "Tailwind",
+		"scss": "SCSS",
+		"downloadSuccess": "Downloaded successfully!"
+	},
+	"usage": {
+		"title": "Usage Examples",
+		"tailwindClasses": "Tailwind Classes",
+		"cssVariables": "CSS Variables",
+		"copiedToClipboard": "Copied to clipboard!"
+	},
+	"toast": {
+		"copiedToClipboard": "{{value}} has been copied to your clipboard.",
+		"colorRandomized": "New base color generated",
+		"downloadSuccess": "Palette downloaded successfully"
+	}
+}
