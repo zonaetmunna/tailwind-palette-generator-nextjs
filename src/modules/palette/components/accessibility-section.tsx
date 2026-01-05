@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { ContrastScore } from '@/shared/hooks';
 import { motion } from 'framer-motion';
 import { Check, AlertCircle } from 'lucide-react';
@@ -15,6 +16,8 @@ export function AccessibilitySection({
 	failingCombinations,
 	totalCombinations,
 }: AccessibilitySectionProps) {
+	const t = useTranslations();
+
 	return (
 		<motion.div
 			className='border p-4 rounded-lg'
@@ -22,9 +25,9 @@ export function AccessibilitySection({
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.3, delay: 0.4 }}>
 			<div className='flex items-center justify-between mb-4'>
-				<h3 className='font-medium'>Accessibility Pairs</h3>
+				<h3 className='font-medium'>{t('accessibility.title')}</h3>
 				<div className='text-xs text-gray-500'>
-					{passingCombinations.length} passing / {totalCombinations} total
+					{passingCombinations.length} {t('accessibility.passing')} / {totalCombinations} {t('accessibility.total')}
 				</div>
 			</div>
 
@@ -32,7 +35,7 @@ export function AccessibilitySection({
 				{/* Passing combinations */}
 				<div>
 					<h4 className='text-sm font-medium text-green-600 dark:text-green-400 mb-2 flex items-center'>
-						<Check className='h-4 w-4 mr-1' /> Accessible Combinations
+						<Check className='h-4 w-4 mr-1' /> {t('accessibility.accessible')}
 					</h4>
 					<div className='grid grid-cols-1 gap-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar'>
 						{passingCombinations.length > 0 ? (
@@ -76,7 +79,7 @@ export function AccessibilitySection({
 								</div>
 							))
 						) : (
-							<div className='text-sm text-gray-500 italic'>No accessible combinations found</div>
+							<div className='text-sm text-gray-500 italic'>{t('accessibility.noAccessibleFound')}</div>
 						)}
 					</div>
 				</div>
@@ -84,7 +87,7 @@ export function AccessibilitySection({
 				{/* Failing combinations */}
 				<div>
 					<h4 className='text-sm font-medium text-red-600 dark:text-red-400 mb-2 flex items-center'>
-						<AlertCircle className='h-4 w-4 mr-1' /> Inaccessible Combinations
+						<AlertCircle className='h-4 w-4 mr-1' /> {t('accessibility.inaccessible')}
 					</h4>
 					<div className='grid grid-cols-1 gap-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar'>
 						{failingCombinations.length > 0 ? (
@@ -128,7 +131,7 @@ export function AccessibilitySection({
 								</div>
 							))
 						) : (
-							<div className='text-sm text-gray-500 italic'>All combinations are accessible!</div>
+							<div className='text-sm text-gray-500 italic'>{t('accessibility.allAccessible')}</div>
 						)}
 					</div>
 				</div>

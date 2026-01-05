@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
+import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 import { toast } from 'sonner';
 
@@ -31,6 +32,7 @@ export default function ColorPaletteGenerator() {
 	const [isDarkMode, setIsDarkMode] = useState(true);
 
 	// Hooks
+	const t = useTranslations();
 	const { theme, setTheme } = useTheme();
 	const { generateColorShades } = usePaletteGenerator();
 	const { hexToHSL, hslToHex } = useColorConverter();
@@ -83,8 +85,8 @@ export default function ColorPaletteGenerator() {
 	const handleCopyHex = (hex: string) => {
 		navigator.clipboard.writeText(hex);
 		setCopiedHex(hex);
-		toast.success('Copied to clipboard', {
-			description: `${hex} has been copied to your clipboard.`,
+		toast.success(t('toast.copiedToClipboard'), {
+			description: `${hex} ${t('toast.copiedDescription')}`,
 			duration: 1000,
 		});
 	};
@@ -123,8 +125,8 @@ export default function ColorPaletteGenerator() {
 			setInputValue(newColor);
 		}
 
-		toast.success('Color Randomized', {
-			description: 'New base color generated',
+		toast.success(t('toast.colorRandomized'), {
+			description: t('toast.colorRandomizedDescription'),
 			duration: 1000,
 		});
 
@@ -151,16 +153,16 @@ export default function ColorPaletteGenerator() {
 			.map((s) => `bg-primary-${s.shade} text-primary-${s.shade}`)
 			.join('\n');
 		navigator.clipboard.writeText(examples);
-		toast.success('Copied!', {
-			description: 'Tailwind classes copied to clipboard',
+		toast.success(t('common.copied'), {
+			description: t('usage.copiedToClipboard'),
 		});
 	};
 
 	const handleCopyCSSVariables = () => {
 		const cssVars = colorShades.map((s) => `--color-primary-${s.shade}: ${s.hex};`).join('\n');
 		navigator.clipboard.writeText(`:root {\n  ${cssVars}\n}`);
-		toast.success('Copied!', {
-			description: 'CSS variables copied to clipboard',
+		toast.success(t('common.copied'), {
+			description: t('usage.copiedToClipboard'),
 		});
 	};
 

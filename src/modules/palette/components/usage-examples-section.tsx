@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Copy } from 'lucide-react';
 import { Button } from '@/shared/components/ui/button';
@@ -16,24 +17,26 @@ export function UsageExamplesSection({
 	onCopyTailwindClasses,
 	onCopyCSSVariables,
 }: UsageExamplesSectionProps) {
+	const t = useTranslations();
+
 	return (
 		<motion.div
 			className='border rounded-lg p-4 bg-muted/30'
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.3, delay: 0.5 }}>
-			<h3 className='font-medium mb-3'>Usage Examples</h3>
+			<h3 className='font-medium mb-3'>{t('usage.title')}</h3>
 			<div className='space-y-3'>
 				<div>
 					<div className='flex items-center justify-between mb-1'>
-						<p className='text-xs text-muted-foreground font-medium'>Tailwind Classes</p>
+						<p className='text-xs text-muted-foreground font-medium'>{t('usage.tailwindClasses')}</p>
 						<Button
 							variant='ghost'
 							size='sm'
 							className='h-6 text-xs'
 							onClick={onCopyTailwindClasses}>
 							<Copy className='h-3 w-3 mr-1' />
-							Copy
+							{t('common.copy')}
 						</Button>
 					</div>
 					<pre className='text-xs bg-background border rounded p-2 overflow-x-auto'>
@@ -42,10 +45,10 @@ export function UsageExamplesSection({
 				</div>
 				<div>
 					<div className='flex items-center justify-between mb-1'>
-						<p className='text-xs text-muted-foreground font-medium'>CSS Variables</p>
+						<p className='text-xs text-muted-foreground font-medium'>{t('usage.cssVariables')}</p>
 						<Button variant='ghost' size='sm' className='h-6 text-xs' onClick={onCopyCSSVariables}>
 							<Copy className='h-3 w-3 mr-1' />
-							Copy
+							{t('common.copy')}
 						</Button>
 					</div>
 					<pre className='text-xs bg-background border rounded p-2 overflow-x-auto'>

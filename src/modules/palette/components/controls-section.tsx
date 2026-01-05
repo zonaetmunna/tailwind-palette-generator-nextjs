@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Slider } from '@/shared/components/ui/slider';
 
@@ -16,6 +17,8 @@ export function ControlsSection({
 	onVibrancyChange,
 	onHueShiftChange,
 }: ControlsSectionProps) {
+	const t = useTranslations();
+
 	return (
 		<motion.div
 			className='space-y-4'
@@ -27,7 +30,7 @@ export function ControlsSection({
 				whileHover={{ scale: 1.01 }}
 				transition={{ type: 'spring', stiffness: 400, damping: 25 }}>
 				<div className='flex justify-between'>
-					<label className='text-sm font-medium'>Vibrancy</label>
+					<label className='text-sm font-medium'>{t('controls.vibrancy')}</label>
 					<motion.span
 						className='text-sm text-gray-500'
 						animate={{
@@ -52,7 +55,7 @@ export function ControlsSection({
 				whileHover={{ scale: 1.01 }}
 				transition={{ type: 'spring', stiffness: 400, damping: 25 }}>
 				<div className='flex justify-between'>
-					<label className='text-sm font-medium'>Hue Shift</label>
+					<label className='text-sm font-medium'>{t('controls.hueShift')}</label>
 					<motion.span
 						className='text-sm text-gray-500'
 						animate={{

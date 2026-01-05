@@ -1,0 +1,55 @@
+{
+	"common": {
+		"appName": "টেইলউইন্ড প্যালেট জেনারেটর",
+		"loading": "লোড হচ্ছে...",
+		"error": "ত্রুটি",
+		"success": "সফল",
+		"copy": "কপি করুন",
+		"copied": "কপি হয়েছে!",
+		"download": "ডাউনলোড",
+		"randomize": "এলোমেলো",
+		"darkMode": "ডার্ক মোড"
+	},
+	"header": {
+		"title": "টেইলউইন্ড প্যালেট জেনারেটর",
+		"subtitle": "সুন্দর রঙের প্যালেট তৈরি করুন"
+	},
+	"colorPicker": {
+		"baseColor": "মূল রঙ",
+		"hexPlaceholder": "#RRGGBB",
+		"invalidColor": "অবৈধ রঙের ফরম্যাট"
+	},
+	"controls": {
+		"vibrancy": "উজ্জ্বলতা",
+		"hueShift": "হিউ শিফট"
+	},
+	"accessibility": {
+		"title": "অ্যাক্সেসিবিলিটি পেয়ার",
+		"accessible": "অ্যাক্সেসযোগ্য সমন্বয়",
+		"inaccessible": "অ্যাক্সেসযোগ্য নয়",
+		"passing": "পাস",
+		"total": "মোট",
+		"noAccessibleFound": "কোনো অ্যাক্সেসযোগ্য সমন্বয় পাওয়া যায়নি",
+		"allAccessible": "সব সমন্বয় অ্যাক্সেসযোগ্য!"
+	},
+	"export": {
+		"json": "JSON",
+		"css": "CSS",
+		"tailwind": "Tailwind",
+		"scss": "SCSS",
+		"downloadSuccess": "সফলভাবে ডাউনলোড হয়েছে!"
+	},
+	"usage": {
+		"title": "ব্যবহারের উদাহরণ",
+		"tailwindClasses": "টেইলউইন্ড ক্লাস",
+		"cssVariables": "CSS ভেরিয়েবল",
+		"copiedToClipboard": "ক্লিপবোর্ডে কপি হয়েছে!"
+	},
+	"toast": {
+		"copiedToClipboard": "ক্লিপবোর্ডে কপি হয়েছে",
+		"copiedDescription": "আপনার ক্লিপবোর্ডে কপি হয়েছে।",
+		"colorRandomized": "রঙ এলোমেলো করা হয়েছে",
+		"colorRandomizedDescription": "নতুন মূল রঙ তৈরি হয়েছে",
+		"downloadSuccess": "প্যালেট সফলভাবে ডাউনলোড হয়েছে"
+	}
+}

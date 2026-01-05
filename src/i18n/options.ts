@@ -1,14 +1,14 @@
 export const languages = [
-  {
-    name: 'bangla',
-    displayName: 'বাংলা',
-    locale: 'bn',
-  },
-  {
-    name: 'english',
-    displayName: 'English',
-    locale: 'en',
-  },
+	{
+		name: 'bangla',
+		displayName: 'বাংলা',
+		locale: 'bn',
+	},
+	{
+		name: 'english',
+		displayName: 'English',
+		locale: 'en',
+	},
 ];
 
 export const defaultLocale = 'bn';

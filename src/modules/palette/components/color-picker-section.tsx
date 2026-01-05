@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { HexColorPicker } from 'react-colorful';
 import { RefreshCw } from 'lucide-react';
@@ -26,6 +27,8 @@ export function ColorPickerSection({
 	onInputKeyDown,
 	onRandomize,
 }: ColorPickerSectionProps) {
+	const t = useTranslations();
+
 	return (
 		<motion.div
 			className='space-y-4 border p-4 rounded-lg'
@@ -33,7 +36,7 @@ export function ColorPickerSection({
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.3, delay: 0.1 }}>
 			<div className='flex items-center justify-between'>
-				<h3 className='font-medium'>Base Color</h3>
+				<h3 className='font-medium'>{t('colorPicker.baseColor')}</h3>
 				<div className='flex items-center gap-2'>
 					<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 						<Button
@@ -43,7 +46,7 @@ export function ColorPickerSection({
 							className='text-xs'
 							disabled={isRandomizing}>
 							<RefreshCw className={`h-3 w-3 mr-1 ${isRandomizing ? 'animate-spin' : ''}`} />
-							Randomize
+							{t('common.randomize')}
 						</Button>
 					</motion.div>
 					<motion.div
@@ -80,7 +83,7 @@ export function ColorPickerSection({
 					onBlur={onInputBlur}
 					onKeyDown={onInputKeyDown}
 					className='flex-1 px-3 py-2 border rounded-lg text-sm font-mono transition-all duration-200 focus:ring-2 focus:ring-primary focus:border-transparent'
-					placeholder='#RRGGBB'
+					placeholder={t('colorPicker.hexPlaceholder')}
 					initial={{ scale: 1 }}
 					whileFocus={{ scale: 1.01 }}
 					transition={{ duration: 0.2 }}
